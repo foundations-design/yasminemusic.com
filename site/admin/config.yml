@@ -59,6 +59,9 @@ collections:
             name: record
             widget: "list"
             fields:
+              - label: "Title"
+                name: "name"
+                widget: "string"
               - label: "Album Art"
                 name: "album_art"
                 widget: "image"
