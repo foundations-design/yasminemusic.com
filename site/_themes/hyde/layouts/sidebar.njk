@@ -1,0 +1,28 @@
+<div role="region" class="sidebar">
+  <div class="container sidebar-sticky">
+
+    <div class="sidebar-about">
+      <h1><a href="/">{{ site.name }}</a></h1>
+      <p class="lead">{{ site.title }}</p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item{% if page.url == '/' %} active{% endif %}" href="/">Home</a>
+      {% for item in collections.pages %}
+      <a class="sidebar-nav-item{% if page.url == item.url %} active{% endif %}" href="{{ item.url }}">{{
+        item.data.title }}</a>
+      {% endfor %}
+      {# <a class="sidebar-nav-item" href="{{ pkg.homepage }}" rel="noopener" target="_blank">GitHub project</a> #}
+      {# <span class="sidebar-nav-item">Currently v{{ pkg.version }}</span> #}
+    </nav>
+
+    <div class="social sidebar-nav-item">
+      {% for link in social.links %}
+      <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">
+        <img src="{{ link.image }}" alt="Social Icon">
+      </a>
+      {% endfor %}
+    </div>
+
+  </div>
+</div>
