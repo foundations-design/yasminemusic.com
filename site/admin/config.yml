@@ -7,6 +7,19 @@ backend:
 media_folder: "site/static/img"
 public_folder: "/img"
   
+
+
+# Theme
+# Content
+#   Site Settings
+#   Social Links
+#     - Show on Homepage Toggle
+#   Music
+
+#   Live
+#     - Create True
+
+
 # Please run "npx netlify-cms-proxy-server" for local backend
 # Requires Netlify Config at "Site Configuration -> Build & Deploy -> Deploy Notifications"
 local_backend: true
