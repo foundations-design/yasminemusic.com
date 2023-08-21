@@ -1,3 +1,6 @@
+
+It's building!
+
 In the heart of Baltimore, Jan Emily, a Ph.D. student at John Hopkins, was on the brink of a breakthrough. The ARCADE lab buzzed with energy.
 
 With a background in Biomedical Engineering, Jan had always been fascinated by the intersection of tech and biology. The lab was her playground.

@@ -161,7 +161,7 @@ module.exports = (eleventyConfig) => {
    eleventyConfig.addPassthroughCopy({
       "site/static": ".",
       "site/admin/config.yml": "admin/config.yml",
-   }); // Only one per destination folder, next is better for dev
+   });
 
    eleventyConfig.setServerPassthroughCopyBehavior("passthrough");
 
