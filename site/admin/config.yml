@@ -72,15 +72,15 @@ collections:
             name: record
             widget: "list"
             fields:
-              - label: "URL"
-                name: "url"
-                widget: "string"
               - label: "Album Art"
                 name: "album_art"
                 widget: "image"
                 media_library:
                   config:
                     multiple: false
+              - label: "URL"
+                name: "url"
+                widget: "string"
       - name: "live"
         label: "Live"
         file: "site/_data/live.yaml"
@@ -90,15 +90,22 @@ collections:
             name: sets
             widget: "list"
             fields:
+              - label: "Location"
+                name: "location"
+                widget: "string"
               - label: "URL"
                 name: "url"
                 widget: "string"
               - label: "Date"
                 name: "date"
                 widget: "datetime"
-              - label: "Location"
-                name: "location"
-                widget: "string"
+      - name: "about"
+        label: "About"
+        file: "site/_data/about.md"
+        fields: 
+          - widget: "markdown"
+            label: "content"
+            name: "body"
   - name: "project"
     label: "Projects"
     folder: "site/projects"
