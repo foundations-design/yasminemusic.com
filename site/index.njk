@@ -1,7 +1,3 @@
-{% extends "default.njk" %}
-
-{% block content %}
-
 <section class="sign-up">
     <p>Sign Up for the Latest Info and Updates</p>
     <form action="#" method="post">
@@ -25,13 +21,15 @@
             <li>About</li>
         </ul>
     </nav>
+
     <nav class="social">
-        <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
+        {% for link in social.links %}
+        <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">
+            <img src="{{ link.image }}" alt="Social Icon">
+        </a>
+        {% endfor %}
     </nav>
+
 </section>
 
 <iframe style="border-radius:12px"
@@ -51,5 +49,3 @@
 
     {% endfor %}
 </div> #}
-
-{% endblock %}

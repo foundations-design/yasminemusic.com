@@ -46,48 +46,6 @@ collections:
           - {label: "Name", name: "name", widget: "string", required: false}
           - {label: "Title", name: "title", widget: "string", required: false}
           - {label: "Profile Picture", name: "pic", widget: "image", required: false}
-      - name: "home"
-        label: "Home"
-        file: "site/_data/index-content.md"
-        fields: 
-          - widget: "markdown"
-            label: "content"
-            name: "body"
-      - name: "cv"
-        label: "Curriculum Vitae"
-        file: "site/_data/cv.yaml"
-        fields:
-          - label: "Institutions"
-            widget: "list"
-            name: "Education"
-            fields:
-              - {label: "Degree", name: "Degree", widget: "string"}
-              - {label: "Institution", name: "Institution", widget: "string"}
-              - {label: "Location", name: "Location", widget: "string"}
-              - {label: "Duration (ex. Dec 2018 – Aug 2022)", name: "Duration", widget: "string", default: ""}
-              - {label: "GPA", name: "GPA", widget: "string", required: false}
-              - {label: "Details", name: "Details", widget: "list", required: false}
-          - label: "Work Experiences"
-            name: "WorkExperience"
-            widget: "list"
-            fields:
-              - {label: "Position", name: "Position", widget: "string"}
-              - {label: "Institution", name: "Institution", widget: "string"}
-              - {label: "Location", name: "Location", widget: "string"}
-              - {label: "Duration", name: "Duration", widget: "string"}
-              - {label: "Responsibilities", name: "Responsibilities", widget: "list"}
-          - label: "Leadership Experiences"
-            name: "LeadershipExperience"
-            widget: "list"
-            fields:
-              - {label: "Position", name: "Position", widget: "string"}
-              - {label: "Institution", name: "Institution", widget: "string"}
-              - {label: "Location", name: "Location", widget: "string", required: false}
-              - {label: "Duration", name: "Duration", widget: "string"}
-              - {label: "Responsibilities", name: "Responsibilities", widget: "list"}
-          - label: "Skills"
-            name: "Skills"
-            widget: "list"
       - name: "social"
         label: "Social Links"
         file: "site/_data/social.yaml"
@@ -105,6 +63,42 @@ collections:
                 media_library:
                   config:
                     multiple: false
+      - name: "music"
+        label: "Music"
+        file: "site/_data/music.yaml"
+        create: true
+        fields:
+          - label: Records
+            name: record
+            widget: "list"
+            fields:
+              - label: "URL"
+                name: "url"
+                widget: "string"
+              - label: "Album Art"
+                name: "album_art"
+                widget: "image"
+                media_library:
+                  config:
+                    multiple: false
+      - name: "live"
+        label: "Live"
+        file: "site/_data/live.yaml"
+        create: true
+        fields:
+          - label: Live Sets
+            name: sets
+            widget: "list"
+            fields:
+              - label: "URL"
+                name: "url"
+                widget: "string"
+              - label: "Date"
+                name: "date"
+                widget: "datetime"
+              - label: "Location"
+                name: "location"
+                widget: "string"
   - name: "project"
     label: "Projects"
     folder: "site/projects"
