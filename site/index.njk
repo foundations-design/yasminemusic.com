@@ -37,7 +37,6 @@
             <li>About</li>
         </ul>
     </nav>
-
     <nav class="social">
         {% for link in social.links %}
         <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">
@@ -45,7 +44,35 @@
         </a>
         {% endfor %}
     </nav>
+</section>
 
+<section class="music">
+    <h2>Music</h2>
+    {% for record in music.records %}
+    <div class="record-item">
+        <img src="{{ record.album_art }}" alt="{{ record.name }} Album Art">
+        <h2>{{ record.name }}</h2>
+        <a href="{{ record.url }}">Listen</a>
+    </div>
+    {% endfor %}
+</section>
+
+<section class="live">
+    <h2>Live</h2>
+    {% for set in live.sets %}
+    <div class="set-item">
+        <p>
+            <time>{{ set.date | dateFormat() }}</time> @
+            {{ set.location }}
+        </p>
+        <a href="{{ set.url }}">View Event</a>
+    </div>
+    {% endfor %}
+</section>
+
+<section class="about">
+    <h2>About</h2>
+    {% renderFile "./site/_data/about.md" %}
 </section>
 
 <iframe style="border-radius:12px"

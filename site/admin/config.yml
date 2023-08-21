@@ -56,7 +56,7 @@ collections:
         create: true
         fields:
           - label: Records
-            name: record
+            name: records
             widget: "list"
             fields:
               - label: "Title"
