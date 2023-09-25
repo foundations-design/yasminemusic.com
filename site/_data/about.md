@@ -1,5 +1,0 @@
-YASMINE parlayed her role as the lead singer of GroupChat, a Chicago-based funk fusion band, into her solo career as an R&B and pop artist. YASMINE has penned some of GroupChat’s fan favorites, including “Heartstrings” and continues to share her songwriting and vocal chops in the spaces and sounds of contemporary R&B and neo-soul. 
-
-YASMINE is intentional about working with Chicago-based creators and celebrating creative spaces in Chicago, with the objective of creating community and connection through music. She has performed at some of Chicago's premier music venues, including Reggie's Rock Club, House of Blues, Uncommon Ground, and Golden Dagger.
-
-Her previous training in opera and influence from the likes of vocalists like Alicia Keys, Jazmine Sullivan, and SZA allow YASMINE to communicate a unique message and create a unique sound that is spiked with style, passion, and soul.
