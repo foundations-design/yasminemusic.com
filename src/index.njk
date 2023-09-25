@@ -1,0 +1,118 @@
+---
+content:
+   title: YASMINE
+   links:
+      - 
+         image: https://res.cloudinary.com/foundations-design/image/upload/v1693520390/sm-icons/apple.svg
+         url: https://music.apple.com/us/album/heartstrings-single/1668955415
+      - 
+         image: https://res.cloudinary.com/foundations-design/image/upload/v1693256360/sm-icons/spotify.svg
+         url: https://open.spotify.com/artist/4Xcb2gsTmbFFS22zXfrdef?si=txtlHPiORn-gktKSsirDTw
+      - 
+         image: https://res.cloudinary.com/foundations-design/image/upload/v1693256360/sm-icons/youtube.svg
+         url: https://www.youtube.com/@MusicByYASMINE
+      - 
+         image: https://res.cloudinary.com/foundations-design/image/upload/v1693256360/sm-icons/instagram.svg
+         url: https://www.instagram.com/thequeenyazzyg/
+      - 
+         image: https://res.cloudinary.com/foundations-design/image/upload/v1693256360/sm-icons/email.svg
+         email: contact@earljman.dev
+theme: 
+   titleColor: "#FFFFFF"
+   accentColor: "#F9DCE1" # icons, form fields, design accents
+   backgroundColor: "rgba(13, 16, 17, 1)"
+   backgroundColor2: "rgba(19, 21, 20, 1)"
+developerSettings:
+   baseUrl: yasminemusic.com
+   linklyReferralLink: https://referral.foundations.design/ysmn
+---
+
+{% extends "base.njk" %}
+{% block content %}
+
+   <!-- header: for introductory content -->
+   <header>
+      <hgroup>
+         <h1 class="title">{{content.title}}</h1>
+      </hgroup>
+   </header>
+   <main>
+      <section class="image"></section>
+      <section class="links">
+         {% for link in content.links %}
+            <nav class="link">
+               <a target="_blank" href="{{link.url}}"><img src="{{link.image}}"/></a>
+            </nav>
+         {% endfor %}
+      </section>
+      <section class="email-form">
+         {% include "emailform.njk" %}
+      </section>
+   </main>
+</body>
+
+<style>
+
+   /* DEV STYLE */
+   body > * {
+      border: 3px solid blue;
+   }
+   main > * {
+      border: 3px solid red;
+   }
+
+   /* layout styles for the top-level sections: header, section.links*/
+
+   header {
+      position: top;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 28%;
+      display: grid;
+      place-content: center;
+      border: none;
+      border-top: 40px solid{{theme.accentColor}};
+   }
+
+   main {
+      position: absolute;
+      bottom: 5%;
+      right: 0;
+      left: 0;
+      height: 67%;
+      display: grid;
+   }
+</style>
+
+<style>
+
+   /*styles for WITHIN the top-level sections: header, section.links*/
+
+   header hgroup {
+      width: max-content;
+      height: max-content;
+   }
+
+   h1.title {
+      font-size: clamp(16px, 25lvw, 160px);
+      text-align: center;
+      width: min-content;
+      font-variation-settings: "WONK" 1, "opsz" 144, "SOFT" 22, "wght" 900;
+      color: {{theme.titleColor}};
+      margin: 0;
+      line-height: 1;
+   }
+
+   section.links {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xs);
+      flex-wrap: wrap;
+      direction: rtl;
+      width: max-content;
+      margin-right: var(--space-md);
+   }
+</style>
+
+{% endblock %}
