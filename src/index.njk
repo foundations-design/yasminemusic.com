@@ -1,6 +1,7 @@
 ---
 content:
    title: YASMINE
+   pic: "photo.webp"
    links:
       - 
          image: https://res.cloudinary.com/foundations-design/image/upload/v1693520390/sm-icons/apple.svg
@@ -37,7 +38,7 @@ developerSettings:
       </hgroup>
    </header>
    <main>
-      <section class="image"></section>
+      <section class="image"><img src="{{content.pic}}" alt="Profile Pic"/></section>
       <section class="links">
          {% for link in content.links %}
             <nav class="link">
@@ -45,24 +46,23 @@ developerSettings:
             </nav>
          {% endfor %}
       </section>
-      <section class="email-form">
-         {% include "emailform.njk" %}
+      <section class="email-form-container">
+         {% include "email-form.njk" %}
       </section>
    </main>
 </body>
 
 <style>
 
-   /* DEV STYLE */
+   /* DEV STYLE 
    body > * {
       border: 3px solid blue;
    }
    main > * {
       border: 3px solid red;
-   }
+   }*/
 
-   /* layout styles for the top-level sections: header, section.links*/
-
+   /* layout styles for the top-level sections: header, main, sections*/
    header {
       position: top;
       top: 0;
@@ -77,11 +77,34 @@ developerSettings:
 
    main {
       position: absolute;
-      bottom: 5%;
+      bottom: 4%;
       right: 0;
       left: 0;
       height: 67%;
       display: grid;
+      grid-template-columns: 70% 30%;
+      grid-template-rows: 70% 30%;
+      justify-content: stretch;
+      align-content: stretch;
+   }
+
+   section.links {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xs);
+      flex-wrap: wrap;
+      direction: rtl;
+      justify-content: space-evenly;
+      align-content: center;
+   }
+
+   section.email-form-container {
+      grid-column: 1 / -1;
+      background-color: {{theme.backgroundColor2}};
+      padding-left: var(--space-md);
+      padding-right: var(--space-md);
+      display: grid;
+      align-content: center;
    }
 </style>
 
@@ -102,16 +125,6 @@ developerSettings:
       color: {{theme.titleColor}};
       margin: 0;
       line-height: 1;
-   }
-
-   section.links {
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-xs);
-      flex-wrap: wrap;
-      direction: rtl;
-      width: max-content;
-      margin-right: var(--space-md);
    }
 </style>
 

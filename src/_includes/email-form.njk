@@ -1,0 +1,48 @@
+<div>
+   <style>
+      .email-form {
+         --c: {{theme.accentColor}};
+         text-align: center;
+      }
+
+      .email-form label {
+         color: var(--c);
+         margin-bottom: var(--space-2xs);
+         font-style: italic;
+      }
+
+      .email-form form {
+         display: flex;
+         flex-direction: column;
+         place-content: center;
+      }
+
+      .email-form .email-field {
+         display: flex;
+         flex-direction: row;
+         width: 100%;
+      }
+
+      .email-form .email-field input {
+         width: 100%;
+      }
+
+      .email-form .icon {
+         background-color: {{theme.accentColor}};
+      }
+   </style>
+   <div class="email-form">
+      <form name="emails" method="POST" data-netlify="true" action="/success">
+         <label for="email">Get the Latest Updates</label>
+         <div class="email-field">
+            <input  type="email" name="email" placeholder="Email Address">
+            <div class="icon">
+               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="black">
+                  <path d="M8.29492 16.59L12.8749 12L8.29492 7.41L9.70492 6L15.7049 12L9.70492 18L8.29492 16.59Z"/>
+               </svg>
+            </div>
+         </div>
+      </p>
+   </form>
+</div>
+</div>
