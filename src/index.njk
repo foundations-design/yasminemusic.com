@@ -4,19 +4,19 @@ content:
    pic: "photo.webp"
    links:
       - 
-         image: https://res.cloudinary.com/foundations-design/image/upload/v1693520390/sm-icons/apple.svg
+         icon: social-icons/apple_mono.svg
          url: https://music.apple.com/us/album/heartstrings-single/1668955415
       - 
-         image: https://res.cloudinary.com/foundations-design/image/upload/v1693256360/sm-icons/spotify.svg
+         icon: social-icons/spotify_mono.svg
          url: https://open.spotify.com/artist/4Xcb2gsTmbFFS22zXfrdef?si=txtlHPiORn-gktKSsirDTw
       - 
-         image: https://res.cloudinary.com/foundations-design/image/upload/v1693256360/sm-icons/youtube.svg
+         icon: social-icons/youtube_mono.svg
          url: https://www.youtube.com/@MusicByYASMINE
       - 
-         image: https://res.cloudinary.com/foundations-design/image/upload/v1693256360/sm-icons/instagram.svg
+         icon: social-icons/instagram_mono.svg
          url: https://www.instagram.com/thequeenyazzyg/
       - 
-         image: https://res.cloudinary.com/foundations-design/image/upload/v1693256360/sm-icons/email.svg
+         icon: social-icons/email_mono.svg
          email: Yasminemusicbusiness@gmail.com
 theme: 
    titleColor: "#FFFFFF"
@@ -42,7 +42,10 @@ developerSettings:
       <section class="links">
          {% for link in content.links %}
             <nav class="link">
-               <a target="_blank" href="{{link.url}}"><img src="{{link.image}}"/></a>
+               <a target="_blank" href="{{link.url}}">
+                  {% include link.icon %}
+                  <img src="{{link.image}}"/>
+               </a>
             </nav>
          {% endfor %}
       </section>
@@ -118,13 +121,17 @@ developerSettings:
    }
 
    h1.title {
-      font-size: clamp(16px, 25lvw, 160px);
+      font-size: clamp(16px, 29lvw, 160px);
       text-align: center;
       width: min-content;
       font-variation-settings: "WONK" 1, "opsz" 144, "SOFT" 22, "wght" 900;
       color: {{theme.titleColor}};
-      margin: 0;
+      margin: 0 0 -1rem;
       line-height: 1;
+   }
+
+   .link svg {
+      fill: {{theme.accentColor}};
    }
 </style>
 
