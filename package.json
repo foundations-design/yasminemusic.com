@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "browserslist": "^4.21.10",
+    "eleventy-plugin-gen-favicons": "^1.1.2",
     "lightningcss": "^1.21.7",
     "sass": "^1.66.1"
   }

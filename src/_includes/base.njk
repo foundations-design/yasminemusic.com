@@ -6,7 +6,31 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link href="{{ '/assets/fonts/tungsten/stylesheet.css'}}" rel="stylesheet">
       <link rel="stylesheet" href="/styles/index.css">
-      <title>🔥 {{content.title}}</title>
+
+      {% favicons 'src/favicon.svg',
+      appleIconBgColor = theme.accentColor %}
+
+      <title>{{content.title}}</title>
+
+      <!-- HTML Meta Tags -->
+      <title>YASMINE Music</title>
+      <meta name="description" content="Links, Shows, and Info">
+
+      <!-- Facebook Meta Tags -->
+      <meta property="og:url" content="yasminemusic.com">
+      <meta property="og:type" content="website">
+      <meta property="og:title" content="YASMINE Music">
+      <meta property="og:description" content="Links, Shows, and Info">
+      <meta property="og:image" content="/og_image.png">
+
+      <!-- Twitter Meta Tags -->
+      <meta name="twitter:card" content="summary_large_image">
+      <meta property="twitter:domain" content="yasminemusic.com">
+      <meta property="twitter:url" content="yasminemusic.com">
+      <meta name="twitter:title" content="YASMINE Music">
+      <meta name="twitter:description" content="Links, Shows, and Info">
+      <meta name="twitter:image" content="/og_image.png">
+
    </head>
 
    <body>
