@@ -3,6 +3,9 @@
       .email-form {
          --c: {{theme.accentColor}};
          text-align: center;
+         max-width: 500px;
+         margin-left: auto;
+         margin-right: auto;
       }
 
       .email-form label {
@@ -10,7 +13,7 @@
          margin-bottom: var(--space-2xs);
          font-style: italic;
          font-family: "Garamond";
-         font-size: var(--d-lg);
+         font-size: var(--d-md);
       }
 
       .email-form form {
@@ -40,6 +43,7 @@
       .email-form .email-field input::placeholder {
          color: {{theme.accentColor}};
          opacity: 0.8;
+         font-size: var(--d-md);
       }
       .email-form .email-field input:disabled {
          background-color: {{theme.accentColor}};
