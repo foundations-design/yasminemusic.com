@@ -37,6 +37,10 @@
          border-radius: 3px 0 0 3px;
       }
 
+      .email-form .email-field input:disabled {
+         background-color: {{theme.accentColor}};
+      }
+
       .email-form button {
          border: 0;
       }
@@ -62,7 +66,42 @@
                </svg>
             </button>
          </div>
-      </p>
-   </form>
-</div>
+      </form>
+   </div>
+   <script>
+      const handleSubmit = (event) => {
+         event.preventDefault();
+
+         const myForm = event.target;
+         const formData = new FormData(myForm);
+
+         fetch("/", {
+            method: "POST",
+            headers: {
+               "Content-Type": "application/x-www-form-urlencoded"
+            },
+            body: new URLSearchParams(formData).toString()
+         })
+            .then(() => {
+               alert("Thank you for your submission")
+               const field = document.querySelector(".email-form .email-field input")
+               field.disabled = true
+               field.value = "Talk to you soon!"
+               field.style = `color: var(--color-bg);`
+
+               const button = document.querySelector(".email-form .email-field button")
+               button.disabled = true
+               button.innerHTML = `
+                  <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M0 4.64444L1.22222 3.05556L4.4 5.74444L9.53333 0L11 1.34444L4.52222 8.43333L0 4.64444Z" fill="black"/>
+                  </svg>
+               `
+            })
+            .catch((error) => alert(error));
+      };
+
+      document
+         .querySelector("form")
+         .addEventListener("submit", handleSubmit);
+   </script>
 </div>
