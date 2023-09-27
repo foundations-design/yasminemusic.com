@@ -85,8 +85,8 @@ developerSettings:
       left: 0;
       height: 67%;
       display: grid;
-      grid-template-columns: 70% 30%;
-      grid-template-rows: 70% 30%;
+      grid-template-columns: 65% 35%;
+      grid-template-rows: 72% 28%;
       justify-content: stretch;
       align-content: stretch;
    }
@@ -94,7 +94,6 @@ developerSettings:
    section.links {
       display: flex;
       flex-direction: column;
-      gap: var(--space-xs);
       flex-wrap: wrap;
       direction: rtl;
       justify-content: space-evenly;
@@ -104,8 +103,8 @@ developerSettings:
    section.email-form-container {
       grid-column: 1 / -1;
       background-color: {{theme.backgroundColor2}};
-      padding-left: var(--space-md);
-      padding-right: var(--space-md);
+      padding-left: var(--space-lg);
+      padding-right: var(--space-lg);
       display: grid;
       align-content: center;
    }
@@ -124,7 +123,6 @@ developerSettings:
       font-size: clamp(16px, 29lvw, 160px);
       text-align: center;
       width: min-content;
-      font-variation-settings: "WONK" 1, "opsz" 144, "SOFT" 22, "wght" 900;
       color: {{theme.titleColor}};
       margin: 0 0 -1rem;
       line-height: 1;
@@ -132,6 +130,14 @@ developerSettings:
 
    .link svg {
       fill: {{theme.accentColor}};
+      width: 42px;
+   }
+
+   .image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 100% 15%;
    }
 </style>
 
