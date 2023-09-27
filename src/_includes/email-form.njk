@@ -37,12 +37,17 @@
          border-radius: 3px 0 0 3px;
       }
 
+      .email-form .email-field input::placeholder {
+         color: {{theme.accentColor}};
+         opacity: 0.8;
+      }
       .email-form .email-field input:disabled {
          background-color: {{theme.accentColor}};
       }
 
       .email-form button {
          border: 0;
+         padding: 0;
       }
 
       .email-form .icon {
@@ -52,6 +57,11 @@
          place-content: center;
          border-radius: 0 3px 3px 0;
          width: 2.4rem;
+      }
+
+      .email-form .icon svg {
+         height: 24px;
+         width: 24px;
       }
    </style>
 
@@ -83,17 +93,16 @@
             body: new URLSearchParams(formData).toString()
          })
             .then(() => {
-               alert("Thank you for your submission")
+               /* alert("Thank you for your submission") */
                const field = document.querySelector(".email-form .email-field input")
-               field.disabled = true
                field.value = "Talk to you soon!"
-               field.style = `color: var(--color-bg);`
+               field.style = `color: var(--color-bg); background-color: var(--color-a)`
 
                const button = document.querySelector(".email-form .email-field button")
                button.disabled = true
                button.innerHTML = `
-                  <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                     <path d="M0 4.64444L1.22222 3.05556L4.4 5.74444L9.53333 0L11 1.34444L4.52222 8.43333L0 4.64444Z" fill="black"/>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6 12.6444L7.22222 11.0556L10.4 13.7444L15.5333 8L17 9.34444L10.5222 16.4333L6 12.6444Z" fill="black"/>
                   </svg>
                `
             })

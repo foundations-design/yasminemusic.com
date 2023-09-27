@@ -10,6 +10,8 @@
       {% favicons 'src/favicon.svg',
       appleIconBgColor = theme.accentColor %}
 
+      <meta name="theme-color" content="{{theme.accentColor}}">
+
       <title>{{content.title}}</title>
 
       <!-- HTML Meta Tags -->
@@ -59,15 +61,8 @@
 
       <style>
 
-         /*STARTER LAYOUT*/
-         /* The following CSS is closely tied with the business specifications of LITE/STARTER. */
-         /*
-      Specifically: 
-        - STARTER supports a maximum width of 600px, based on the viewport size of the largest smartphones
-        - Any viewports larger than 600px will show a square website
-      */
          :root {
-            --starter-max-width: 600px;
+            --starter-max-width: none;
             --font-secondary: "Tungsten";
          }
 
@@ -80,7 +75,7 @@
          }
 
          body {
-            height: 100lvh;
+            height: 110lvh;
             width: 100lvw;
             background-color: {{theme.backgroundColor}};
             position: relative;

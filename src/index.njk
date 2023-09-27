@@ -68,6 +68,7 @@ developerSettings:
    /* layout styles for the top-level sections: header, main, sections*/
    :root {
       --color-b: {{theme.backgroundColor}};
+      --color-a: {{theme.accentColor}};
    }
 
    header {
@@ -79,12 +80,12 @@ developerSettings:
       display: grid;
       place-content: center;
       border: none;
-      border-top: 40px solid{{theme.accentColor}};
+      border-top: 20px solid{{theme.accentColor}};
    }
 
    main {
       position: absolute;
-      bottom: 4%;
+      top: 28%;
       right: 0;
       left: 0;
       height: 67%;
@@ -128,13 +129,13 @@ developerSettings:
       text-align: center;
       width: min-content;
       color: {{theme.titleColor}};
-      margin: 0 0 -1rem;
+      margin: 0 0 -1lvh;
       line-height: 1;
    }
 
    .link svg {
       fill: {{theme.accentColor}};
-      width: 42px;
+      width: 35px;
    }
 
    .image img {
