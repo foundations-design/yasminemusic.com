@@ -73,6 +73,10 @@ developerSettings:
       --color-a: {{theme.accentColor}};
    }
 
+   body {
+      border-top: 20px solid var(--color-a);
+   }
+
    header {
       position: absolute;
       top: 0;
@@ -82,7 +86,6 @@ developerSettings:
       display: grid;
       place-content: center;
       border: none;
-      border-top: 20px solid var(--color-a);
    }
 
    main {
@@ -123,8 +126,50 @@ developerSettings:
       }
    }
 
-   @media (min-width: 600px and orientation: landscape) {
-      main
+   @media (min-width: 600px) and (orientation: landscape) {
+
+      body {
+         border-top: 40px solid var(--color-a);
+      }
+
+      header {
+         top: 40px;
+         left: 40%;
+         right: 0;
+         height: 40%;
+      }
+
+      main {
+         /*border height*/
+         top: 0;
+         right: 0;
+         left: 0;
+         height: 100%;
+         grid-template-columns: 40% 60%;
+         grid-template-rows: 50% 50%;
+      }
+
+      section.image {
+         grid-row: 1/-1;
+      }
+
+      section.links {
+         display: flex;
+         flex-direction: row;
+         justify-self: center;
+         justify-content: space-evenly;
+         align-content: flex-end;
+         gap: var(--space-xs);
+         margin-bottom: var(--space-sm);
+      }
+
+      section.email-form-container {
+         grid-column: 2;
+         place-self: flex-start center;
+         margin-top: var(--space-sm);
+         width: 70%;
+         height: 60%;
+      }
    }
 </style>
 
