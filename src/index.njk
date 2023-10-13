@@ -92,7 +92,7 @@ developerSettings:
       left: 0;
       height: 67%;
       display: grid;
-      grid-template-columns: 65% 35%;
+      grid-template-columns: 68% 32%;
       grid-template-rows: 72% 28%;
       justify-content: stretch;
       align-content: stretch;
@@ -116,7 +116,16 @@ developerSettings:
       align-content: center;
    }
 
-   @media (min-width: 600px) {}
+   @media (min-width: 600px) {
+      main {
+         grid-template-columns: 80% 20%;
+         grid-template-rows: 80% 20%;
+      }
+   }
+
+   @media (min-width: 600px and orientation: landscape) {
+      main
+   }
 </style>
 
 <style>
@@ -138,10 +147,10 @@ developerSettings:
    }
 
    .link {
-      height: 9lvw;
-      width: 9lvw;
-      max-height: 35px;
-      max-width: 35px;
+      height: 8lvw;
+      width: 8lvw;
+      max-height: 60px;
+      max-width: 60px;
    }
 
    .link svg {
