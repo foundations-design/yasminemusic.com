@@ -1,7 +1,8 @@
 {
   "scripts": {
     "dev": "eleventy --serve",
-    "build": "NODE_ENV=production eleventy --output dist --pathprefix $PATHPREFIX"
+    "build": "NODE_ENV=production eleventy --output dist --pathprefix $PATHPREFIX",
+    "generatePwaAssets": "pwa-asset-generator src/favicon.svg src/static"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1"
