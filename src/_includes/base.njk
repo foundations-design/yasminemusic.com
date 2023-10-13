@@ -37,9 +37,8 @@
     <link rel="apple-touch-startup-image" href="../static/apple-splash-1334-750.jpg" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
     <link rel="apple-touch-startup-image" href="../static/apple-splash-640-1136.jpg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
     <link rel="apple-touch-startup-image" href="../static/apple-splash-1136-640.jpg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
-  </head>
-  <body>{% favicons 'src/favicon.svg',
-      appleIconBgColor = theme.accentColor %}
+    {% favicons 'src/favicon.svg',
+    appleIconBgColor = theme.accentColor %}
     <meta name="theme-color" content="{{theme.accentColor}}">
     <title>{{content.title}}</title>
 
@@ -61,11 +60,24 @@
     <meta name="twitter:title" content="YASMINE Music">
     <meta name="twitter:description" content="Links, Shows, and Info">
     <meta name="twitter:image" content="/og_image.png">
+
+  </head>
+
+  <body>
     {% block content %}{% endblock %}
+
     <footer>
       <div>
         {% if lyket %}
-        <div class="lyket" data-lyket-type="like" data-lyket-id="{{developerSettings.baseUrl}}" data-lyket-namespace="lite" data-lyket-template="twitter" data-lyket-font-family="sans-serif" data-lyket-color-text="rgba(255,255,255,.5)"></div>
+          <div
+            class="lyket"
+            data-lyket-type="like"
+            data-lyket-id="{{developerSettings.baseUrl}}"
+            data-lyket-namespace="lite"
+            data-lyket-template="twitter"
+            data-lyket-font-family="sans-serif"
+            data-lyket-color-text="rgba(255,255,255,.5)"
+            ></div>
         {% endif %}
       </div>
       <div class="logo">
@@ -74,7 +86,9 @@
         </a>
       </div>
     </footer>
+
     <style>
+
       /*STARTER LAYOUT*/
       /* The following CSS is closely tied with the business specifications of LITE/STARTER. */
       /*
@@ -86,6 +100,7 @@
         --starter-max-width: 600px;
         --font-secondary: "Tungsten";
       }
+
       html {
         height: 100lvh;
         width: 100lvw;
@@ -93,17 +108,14 @@
         place-content: center;
         position: relative;
       }
+
       body {
         height: 100lvh;
         width: 100lvw;
-        background-color: {
-            {
-            theme.backgroundColor
-          }
-        }
-        ;
+        background-color: {{theme.backgroundColor}};
         position: relative;
       }
+
       /* the value of media query below should be the same as --starter-max-width */
       @media (min-width: 600px) {
         body {
@@ -112,7 +124,9 @@
           margin: auto;
         }
       }
+
       /* */
+
       footer {
         position: absolute;
         bottom: 0;
@@ -122,25 +136,23 @@
         width: 100%;
         justify-items: center;
         align-items: center;
-        background-color: {
-            {
-            theme.backgroundColor2
-          }
-        }
-        ;
+        background-color: {{theme.backgroundColor2}};
         height: 5%;
       }
-      footer>*:first-child {
+
+      footer > *:first-child {
         margin-left: var(--space-xs);
         place-self: flex-start;
       }
+
       .logo {
         margin-bottom: var(--space-3xs);
         width: 20px;
       }
     </style>
     {% if lyket %}
-    <script src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=pt_b2e989b79fbbbe5f5c7b7d42869d3d"></script>
+
+      <script src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=pt_b2e989b79fbbbe5f5c7b7d42869d3d"></script>
+
     {% endif %}
-  </body>
-</html>
+  </html>
