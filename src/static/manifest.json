@@ -28,7 +28,7 @@
       "purpose": "maskable"
     }
   ],
-  "start_url": "https://yasminemusic.com",
+  "start_url": ".",
   "display": "standalone",
   "background_color": "#131514",
   "theme_color": "#F9DCE1",
