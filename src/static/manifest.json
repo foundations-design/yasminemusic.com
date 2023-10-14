@@ -2,6 +2,11 @@
   "name": "YASMINE Music",
   "short_name": "YASMINE",
   "description": "Links, Shows, and Info",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#131514",
+  "theme_color": "#F9DCE1",
+  "orientation": "portrait",
   "icons": [
     {
       "src": "/manifest-icon-192.maskable.png",
@@ -27,10 +32,5 @@
       "type": "image/png",
       "purpose": "maskable"
     }
-  ],
-  "start_url": ".",
-  "display": "standalone",
-  "background_color": "#131514",
-  "theme_color": "#F9DCE1",
-  "orientation": "portrait"
+  ]
 }

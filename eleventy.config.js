@@ -5,7 +5,7 @@ const browserslist = require("browserslist");
 const { transform, browserslistToTargets } = require("lightningcss");
 
 module.exports = (eleventyConfig) => {
-   eleventyConfig.addPlugin(faviconsPlugin, { outputDir: "./dist", manifestData: { name: "YASMINE Music" } });
+   eleventyConfig.addPlugin(faviconsPlugin, { outputDir: "./dist" });
 
    // Recognize Sass as a "template languages"
    eleventyConfig.addTemplateFormats("sass");

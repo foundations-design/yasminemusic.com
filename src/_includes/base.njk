@@ -41,7 +41,9 @@
     <link rel="apple-touch-startup-image" href="/apple-splash-1136-640.jpg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
 
     {% favicons 'src/favicon.svg',
-    appleIconBgColor = theme.accentColor %}
+    appleIconBgColor = theme.accentColor,
+    generateManifest = false %}
+
     <meta name="theme-color" content="{{theme.accentColor}}">
 
     <link rel="manifest" href="/manifest.json">
