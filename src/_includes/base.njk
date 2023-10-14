@@ -114,8 +114,6 @@
       html {
         height: 100lvh;
         width: 100lvw;
-        display: grid;
-        place-content: center;
         position: relative;
       }
 
@@ -149,6 +147,12 @@
       .logo {
         margin-bottom: var(--space-3xs);
         width: 20px;
+      }
+
+      @media (orientation: landscape) {
+        body {
+          min-height: 700px;
+        }
       }
 
       @media (min-width: 600px) {
