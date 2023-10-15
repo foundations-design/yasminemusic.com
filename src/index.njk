@@ -45,7 +45,12 @@ developerSettings:
       <section class="links">
          {% for link in content.links %}
             <nav class="link">
-               <a target="_blank" href="{{link.url}}">
+
+               <a target="_blank" href="{% if link.email %}
+                  {{"mailto:" + link.email}}
+               {% else %}
+                  {{link.url}}
+               {% endif %}">
                   {% include link.icon %}
                </a>
             </nav>
@@ -129,7 +134,7 @@ developerSettings:
    @media (min-width: 600px) and (orientation: landscape) {
 
       body {
-         border-top: 40px solid var(--color-a);
+         border-top: 20px solid var(--color-a);
       }
 
       header {
@@ -159,8 +164,8 @@ developerSettings:
          justify-self: center;
          justify-content: space-evenly;
          align-content: flex-end;
-         gap: var(--space-xs);
-         margin-bottom: var(--space-sm);
+         gap: var(--space-sm);
+         margin-bottom: var(--space-md);
       }
 
       section.email-form-container {
@@ -187,19 +192,20 @@ developerSettings:
    }
 
    h1.title {
-      font-size: clamp(16px, 29lvw, 160px);
+      font-size: clamp(16px, 28lvw, 200px);
       text-align: center;
       width: min-content;
       color: {{theme.titleColor}};
       margin: 0 0 -1lvh;
       line-height: 1;
+      font-weight: 500;
    }
 
    .link {
       height: 8lvw;
       width: 8lvw;
-      max-height: 60px;
-      max-width: 60px;
+      max-height: 40px;
+      max-width: 40px;
    }
 
    .link svg {
@@ -211,6 +217,12 @@ developerSettings:
       height: 100%;
       object-fit: cover;
       object-position: 100% 15%;
+   }
+
+   @media (min-width: 600px) and (orientation: landscape) {
+      h1.title {
+         font-weight: 600;
+      }
    }
 </style>
 
