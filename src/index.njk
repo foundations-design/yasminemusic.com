@@ -113,6 +113,7 @@ developerSettings:
       direction: rtl;
       justify-content: space-evenly;
       align-content: space-evenly;
+      margin-bottom: var(--space-xs);
    }
 
    section.email-form-container {
@@ -192,7 +193,7 @@ developerSettings:
    }
 
    h1.title {
-      font-size: clamp(16px, 28lvw, 200px);
+      font-size: clamp(16px, 28lvw, 160px);
       text-align: center;
       width: min-content;
       color: {{theme.titleColor}};
@@ -222,6 +223,7 @@ developerSettings:
    @media (min-width: 600px) and (orientation: landscape) {
       h1.title {
          font-weight: 600;
+         font-size: clamp(160px, 20lvw, 200px);
       }
    }
 </style>
